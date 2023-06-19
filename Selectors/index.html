@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        body{
+            font-size: 17px;
+            font-family: arial;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+    <title>jQuery Selectors</title>
+</head>
+<body>
+    <header>
+        <h1>jQuery Selectors</h1>
+    </header>
+    <div id="container">
+        <h1 id="heading1">Heading one</h1>
+        <p id="para1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptas exercitationem distinctio ut laboriosam. Magni nesciunt placeat repellat temporibus, ipsa corrupti, quisquam possimus quia necessitatibus illum, ipsam consequatur beatae dicta?
+        </p>
+        <h1 class="heading">Heading two</h1>
+        <p class="para">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptas exercitationem distinctio ut laboriosam. Magni nesciunt placeat repellat temporibus, ipsa corrupti, quisquam possimus quia necessitatibus illum, ipsam consequatur beatae dicta?
+        </p>
+        <h1 id="heading3">Heading three</h1>
+        <p id="para3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptas exercitationem distinctio ut laboriosam. Magni nesciunt placeat repellat temporibus, ipsa corrupti, quisquam possimus quia necessitatibus illum, ipsam consequatur beatae dicta?
+        </p>
+        <ul id="list">
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#heading1').hide();
+            $('.heading2').hide();
+            $('p').css('color','red');
+            $('#list li:even').css('color','blue');
+            $('#list li:odd').css('color','green');
+        });
+    </script>
+</body>
+</html>

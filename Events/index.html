@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        body{
+            font-size: 17px;
+            font-family: arial;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+    <title>jQuery Events</title>
+</head>
+<body>
+    <header>
+        <h1>jQuery Events</h1>
+    </header>
+    <div id="container">
+        <h3>Mouse Events</h3>
+        <button id="btn1">Hover</button>
+        <button id="btn2">Double Click</button>
+        <button id="btn3">Toggle</button>
+        <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus doloribus optio tenetur recusandae facere magnam voluptatibus voluptatum, suscipit earum cum sit nobis nisi ipsam vitae nesciunt. Fugit dolore deleniti harum?</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            // $('#btn1').click(function(){
+            //     alert('Button Clicked!');
+            // });
+
+            // $('#btn1').on('click', function(){
+            //     $('.para1').hide();
+            // });
+            // $('#btn2').on('click', function(){
+            //     $('.para1').show();
+            // });
+
+            $('#btn3').on('click',function(){
+                $('.para1').toggle();
+            });
+            $('#btn1').hover(function(){
+                $('.para1').toggle();
+            });
+            $('#btn2').dblclick(function(){
+                $('.para1').toggle();
+            })
+        });
+    </script>
+</body>
+</html>
