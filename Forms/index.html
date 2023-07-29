@@ -51,7 +51,15 @@
     </div>
     <script>
         $(document).ready(function(){
-            
+            $('input').focus(function(){
+                $(this).css('background','#a9e1f700')
+            })
+            $('input').blur(function(){
+                $(this).css('background','white')
+            })
+            $('input').keyup(function(){
+                console.log('keyup')
+            })
         });
     </script>
 </body>
